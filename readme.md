@@ -20,7 +20,7 @@ One day you were on local DevOps conference and one guy talked about Configurati
 * **Create VM** : using Vagrant start configured VM `wordpress`. Try to provision it. Destroy, recreate.
 * **Configuration Management** : update ansible playbook `wordpress.yaml` that installs, configures and starts nginx, mysql, WordPress. WordPress should have already configured with theme [twentynineteen](https://ru.wordpress.org/themes/twentynineteen/) and with created user `admin` with password `!2three456.`.
 * **Contribute**: After wordpress is configured using ansible push all your changes to the forked repo and create pull request.
-* **Check yourself**: 
+* **Check yourself**:
   1. Create VM using Vagrant for the first time that should trigger provision.
   2. You should be able to open [http://192.168.50.2](http://192.168.50.2) in your browser and see preconfigured theme and user already created.
   3. Login as `admin` user and create new blogpost.
@@ -28,14 +28,29 @@ One day you were on local DevOps conference and one guy talked about Configurati
   5. In browser after refreshing page you should still see your blogpost.
   6. If you completed previous task you could mentioned the difference between script and Configuration Management tool. Try to list all the differences between them.
 
-### Additional tasks if you feel that it was too easy.
-1. You can write down everything to one file, but usually it make sence to group tasks into the roles and include roles to ansible playbooks. Try to split your big yaml file to roles and reuse them.
+  <details><summary>Tips</summary>
 
-### Tips:
+  * To start vm type `vagrant up`
+  * To provision vm type `vagrant provision`
+  * To destroy vm type `vagrant destroy -f`
+
+  </details>
+
+</br>
+
+### Additional tasks if you feel that it was too easy.
+
+You can write down everything to one file, but usually it make sence to group tasks into the roles and include roles to ansible playbooks. Try to split your big yaml file to roles and reuse them.
+
+<details><summary>Tips</summary>
 
 * Vagrant allows you manipulating Virtual Machines. Check out Useful links for more info. Feel free to google.
 * You don't need to modify `Vagrantfile` to make it work properly. But you can experiment and change any settings that you want.
 * Changing WordPress settings much easier using `wp-cli` tool.
+
+</details>
+
+</br>
 
 ### Recommended soft:
 
